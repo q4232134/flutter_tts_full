@@ -2,7 +2,7 @@ name: flutterttsfull
 description: A new Flutter plugin. support long text tts readding
 version: 0.0.1
 author:
-homepage:
+homepage: https://github.com/q4232134/flutter_tts_full
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

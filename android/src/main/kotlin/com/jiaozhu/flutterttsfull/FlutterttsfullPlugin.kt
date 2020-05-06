@@ -39,12 +39,20 @@ public class FlutterttsfullPlugin : FlutterPlugin, MethodCallHandler, TTsUtil.TT
         when (call.method) {
             "getPlatformVersion" ->
                 result.success("Android ${android.os.Build.VERSION.RELEASE}")
-            "proper" ->
-                result.success(tTsUtil.proper(call.argument("title"), call.argument("content")!!, call.argument("history")!!))
-            "start" ->
-                result.success(apply { tTsUtil.isPlaying = true })
-            "stop" ->
-                result.success(apply { tTsUtil.isPlaying = false })
+            "proper" -> {
+                tTsUtil.proper(call.argument("title"), call.argument("content")!!, call.argument("history"))
+                result.success(null)
+            }
+            "start" -> {
+                tTsUtil.isPlaying = true
+                result.success(null)
+            }
+            "stop" -> {
+                tTsUtil.isPlaying = false
+                result.success(null)
+            }
+            "isPlaying" ->
+                result.success(tTsUtil.isPlaying)
             else ->
                 result.notImplemented()
         }

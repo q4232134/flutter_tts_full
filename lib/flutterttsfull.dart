@@ -35,6 +35,10 @@ class Flutterttsfull {
     await _channel.invokeMethod('stop');
   }
 
+  Future<bool> isPlaying() async {
+    return await _channel.invokeMethod('isPlaying');
+  }
+
   Future platformCallHandler(MethodCall call) async {
     switch (call.method) {
       case "onPlaying":

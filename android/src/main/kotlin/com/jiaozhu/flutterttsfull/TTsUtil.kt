@@ -78,10 +78,10 @@ class TTsUtil(val context: Context) : TextToSpeech.OnInitListener, AudioManager.
      * @param   tag 标题
      * @param   content 内容
      */
-    fun proper(tag: String?, content: String, history: Int = 0) {
+    fun proper(tag: String?, content: String, history: Int? = 0) {
         this.tag = tag
         dealTextMessage(content)
-        current = history
+        current = history!!
         getFocus()
     }
 
