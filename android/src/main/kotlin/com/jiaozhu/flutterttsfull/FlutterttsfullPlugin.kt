@@ -66,11 +66,11 @@ public class FlutterttsfullPlugin : FlutterPlugin, MethodCallHandler, TTsUtil.TT
     }
 
     override fun onCancel(tag: String?) {
-        invokeMethod("onCancel", tag)
+        invokeMethod("onCancel", mapOf("tag" to tag))
     }
 
     override fun onNext(tag: String?) {
-        invokeMethod("onNext", tag)
+        invokeMethod("onNext", mapOf("tag" to tag))
     }
 
     override fun onPlaying(tag: String?, content: String?, index: Int) {
@@ -78,16 +78,16 @@ public class FlutterttsfullPlugin : FlutterPlugin, MethodCallHandler, TTsUtil.TT
     }
 
     override fun onPause(tag: String?) {
-        invokeMethod("onPause", tag)
+        invokeMethod("onPause", mapOf("tag" to tag))
     }
 
     override fun onStart(tag: String?) {
-        invokeMethod("onStart", tag)
+        invokeMethod("onStart", mapOf("tag" to tag))
     }
 
 
     override fun onFinish(tag: String?) {
-        invokeMethod("onFinish", tag)
+        invokeMethod("onFinish", mapOf("tag" to tag))
     }
 
 }

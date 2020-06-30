@@ -39,12 +39,14 @@ class _MyAppState extends State<MyApp> {
     _change() async {
       var tts = Flutterttsfull();
       tts.onPlaying = (tag, content, index) => {print('$tag,$content,$index')};
-      tts.onStart = (it) => {print(it)};
-      tts.onNext = (it) => {print(it)};
-      tts.onFinish = (it) => {print(it)};
+      tts.onStart = (it) => {print('onStart'+it)};
+      tts.onNext = (it) => {print('onNext'+it)};
+      tts.onFinish = (it) => {print('onFinish'+it)};
       print(await tts.isPlaying());
       await tts.proper(
-          "123", "更何况怀里的关怀你电话给谁来电话。发给i给华盛顿国会山打发撒旦按分阿。斯蒂芬噶发噶啥大会睡的很阿斯顿", 0);
+          "123", "更何况怀里的关怀你电话给谁来电话。"
+          "发给i给华盛顿国会山打发撒旦按分阿。"
+          "斯蒂芬噶发噶啥大会睡的很阿斯顿", 0);
       tts.start();
       print(await tts.isPlaying());
       setState(() {
