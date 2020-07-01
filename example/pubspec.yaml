@@ -1,7 +1,7 @@
 name: flutterttsfull_example
 description: long text tts readding~
 publish_to: 'none'
-version: 0.0.2
+version: 0.0.4
 environment:
   sdk: ">=2.2.0 <3.0.0"
 
