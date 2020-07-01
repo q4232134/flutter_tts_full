@@ -49,13 +49,13 @@ class Flutterttsfull {
         onCancel(call.arguments["tag"]);
         break;
       case "onNext":
-        onCancel(call.arguments["tag"]);
+        onNext(call.arguments["tag"]);
         break;
       case "onPause":
-        onCancel(call.arguments["tag"]);
+        onPause(call.arguments["tag"]);
         break;
       case "onStart":
-        onCancel(call.arguments["tag"]);
+        onStart(call.arguments["tag"]);
         break;
       case "onFinish":
         onFinish(call.arguments["tag"]);
