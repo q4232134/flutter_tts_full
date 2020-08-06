@@ -27,6 +27,11 @@ class Flutterttsfull {
         <String, dynamic>{"title": tile, "content": content, "history": his});
   }
 
+
+  Future<dynamic> release() async {
+    await _channel.invokeMethod('release');
+  }
+
   Future<dynamic> start() async {
     await _channel.invokeMethod('start');
   }

@@ -37,8 +37,10 @@ public class FlutterttsfullPlugin : FlutterPlugin, MethodCallHandler, TTsUtil.TT
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
 
         when (call.method) {
-            "getPlatformVersion" ->
-                result.success("Android ${android.os.Build.VERSION.RELEASE}")
+            "release" -> {
+                tTsUtil.release()
+                result.success(null)
+            }
             "proper" -> {
                 tTsUtil.proper(call.argument("title"), call.argument("content")!!, call.argument("history"))
                 result.success(null)
